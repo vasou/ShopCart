@@ -1,0 +1,12 @@
+.home-hero-section {
+  @apply bg-blue-200;
+}
+.home-hero-section .content {
+  @apply min-h-[600px] max_lg:min-h-[500px] max_md:min-h-[auto] max_md:py-28 flex flex-col gap-6 justify-center;
+}
+.home-hero-section .content h1 {
+  @apply mb-6 max_sm:mb-4 text-[58px] leading-[68px] max_xl:text-[54px] max_xl:leading-[64px] max_md:text-[44px] max_md:leading-[54px] max_sm:text-[38px] max_sm:leading-[48px]  font-bold;
+}
+.home-hero-section .content .desc {
+  @apply text-2xl max_xl:text-xl max_md:text-lg mb-6;
+}

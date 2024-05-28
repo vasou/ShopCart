@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.heading1 {
+  @apply text-8xl max_xl:text-7xl max_lg:text-6xl max_md:text-5xl max_sm:text-4xl font-bold;
+}
+.heading2 {
+  @apply text-6xl max_xl:text-5xl max_lg:text-4xl max_md:text-3xl max_sm:text-2xl font-bold;
+}
+.heading3 {
+  @apply text-xl max_md:text-3xl font-bold;
+}
+.heading4 {
+  @apply text-lg max_md:text-xl;
+}
+.heading5 {
+  @apply text-sm max_md:text-base;
+}
+.heading6 {
+  @apply text-sm max_md:text-base;
+}

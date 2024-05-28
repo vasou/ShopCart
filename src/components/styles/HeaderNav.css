@@ -1,0 +1,12 @@
+.header-nav-wrap {
+  @apply bg-white;
+}
+.header-nav-wrap .content-container {
+  @apply min-h-[82px] flex items-center justify-between;
+}
+.header-right-blk {
+  @apply flex justify-between;
+}
+.header-search {
+  @apply min-w-60;
+}

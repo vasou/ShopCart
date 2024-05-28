@@ -1,1 +1,9 @@
-
+body {
+  @apply font-primary text-gray-800;
+}
+.content-container {
+  @apply w-[90%] max-w-lg mx-auto;
+}
+.mega-button {
+  @apply !text-xl max_xl:!text-lg max_lg:!text-base !p-6 max_xl:!p-5 max_lg:!p-4;
+}
