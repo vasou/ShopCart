@@ -1,9 +1,15 @@
 body {
   @apply font-primary text-gray-800;
 }
+.page-section {
+  @apply my-20 max_lg:my-16 max_md:my-14 max_s:my-12;
+}
 .content-container {
   @apply w-[90%] max-w-lg mx-auto;
 }
 .mega-button {
   @apply !text-xl max_xl:!text-lg max_lg:!text-base !p-6 max_xl:!p-5 max_lg:!p-4;
+}
+.section-heading {
+  @apply pb-10 text-5xl max_lg:text-4xl max_md:text-3xl max_s:text-2xl font-bold;
 }

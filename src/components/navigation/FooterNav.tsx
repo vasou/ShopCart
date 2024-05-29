@@ -237,7 +237,7 @@ const PaymentIcons = [
 
 export default function FooterNav() {
   return (
-    <section className="footer-section">
+    <footer className="footer-section">
       <div className="content-container">
         <div className="top">
           <div className="left">
@@ -331,6 +331,6 @@ export default function FooterNav() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

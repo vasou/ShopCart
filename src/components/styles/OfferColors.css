@@ -1,0 +1,24 @@
+.offer-yellow {
+  @apply text-[#cb9917];
+}
+.offer-red {
+  @apply text-[#961f1f];
+}
+.offer-brown {
+  @apply text-[#94623c];
+}
+.offer-green {
+  @apply text-[#003d29];
+}
+.offer-bg-yellow {
+  @apply bg-[#cb9917]/20;
+}
+.offer-bg-red {
+  @apply bg-[#961f1f]/20;
+}
+.offer-bg-brown {
+  @apply bg-[#94623c]/20;
+}
+.offer-bg-green {
+  @apply bg-[#003d29]/20;
+}

@@ -9,7 +9,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
       <HeaderNav />
-      {children}
+      <main>{children}</main>
       <FooterNav />
     </>
   );
