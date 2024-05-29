@@ -1,7 +1,7 @@
 import "@/components/styles/HeaderNav.css";
 import BrandLogo from "@/assets/shopcart_logo.svg";
 import { Button } from "../ui/button";
-import { ShoppingCart, UserRound } from "lucide-react";
+import { Menu, ShoppingCart, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Input } from "../ui/input";
 
@@ -16,17 +16,31 @@ export default function HeaderNav() {
             </Link>
           </div>
           <div className="header-right-blk">
-            <Input className="header-search" type="text" placeholder="Search" />
-            <Button variant={"ghost"} className="flex gap-2" asChild>
-              <Link to="/profile">
-                <UserRound width={"26"} height={"26"} />
-                Profile
-              </Link>
-            </Button>
-            <Button variant={"ghost"} className="flex gap-2">
-              <ShoppingCart width={"26"} height={"26"} />
-              Cart
-            </Button>
+            <div className="flex max_md:hidden">
+              <Input
+                className="header-search"
+                type="text"
+                placeholder="Search"
+              />
+              <Button variant={"ghost"} className="flex gap-2" asChild>
+                <Link to="/profile">
+                  <UserRound width={"26"} height={"26"} />
+                  Profile
+                </Link>
+              </Button>
+            </div>
+            <div className="hidden max_md:block">
+              <Button variant={"ghost"} className="flex gap-2">
+                <Menu width={"26"} height={"26"} />
+                Menu
+              </Button>
+            </div>
+            <div className="max_s:hidden">
+              <Button variant={"ghost"} className="flex gap-2">
+                <ShoppingCart width={"26"} height={"26"} />
+                Cart
+              </Button>
+            </div>
           </div>
         </div>
       </div>
