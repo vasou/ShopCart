@@ -52,10 +52,10 @@ export default function GetUptoOfferSection() {
                 <Link
                   to={item.link}
                   className={`rounded-lg bg-gray-100 overflow-hidden ${
-                    item.color === "yellow" && "offer-bg-yellow"
-                  } ${item.color === "red" && "offer-bg-red"} ${
-                    item.color === "brown" && "offer-bg-brown"
-                  } ${item.color === "green" && "offer-bg-green"}`}
+                    item.color === "yellow" ? "offer-bg-yellow" : ""
+                  } ${item.color === "red" ? "offer-bg-red" : ""} ${
+                    item.color === "brown" ? "offer-bg-brown" : ""
+                  } ${item.color === "green" ? "offer-bg-green" : ""}`}
                   key={item.id}
                 >
                   <div className="p-8">
@@ -65,21 +65,21 @@ export default function GetUptoOfferSection() {
                     <div className="py-2 flex items-start pb-6">
                       <p
                         className={`text-2xl ${
-                          item.color === "yellow" && "offer-yellow"
-                        } ${item.color === "red" && "offer-red"} ${
-                          item.color === "brown" && "offer-brown"
+                          item.color === "yellow" ? "offer-yellow" : ""
+                        } ${item.color === "red" ? "offer-red" : ""} ${
+                          item.color === "brown" ? "offer-brown" : ""
                         } ${
-                          item.color === "green" && "offer-green"
+                          item.color === "green" ? "offer-green" : ""
                         } font-semibold`}
                       >
                         $
                       </p>
                       <p
                         className={`text-[56px] leading-[56px] max_xl:text-9xl max_md:text-8xl font-bold ${
-                          item.color === "yellow" && "offer-yellow"
-                        } ${item.color === "red" && "offer-red"} ${
-                          item.color === "brown" && "offer-brown"
-                        } ${item.color === "green" && "offer-green"}`}
+                          item.color === "yellow" ? "offer-yellow" : ""
+                        } ${item.color === "red" ? "offer-red" : ""} ${
+                          item.color === "brown" ? "offer-brown" : ""
+                        } ${item.color === "green" ? "offer-green" : ""}`}
                       >
                         {item.price}
                       </p>

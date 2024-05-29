@@ -1,24 +1,24 @@
 .offer-yellow {
-  @apply text-[#cb9917];
+  @apply text-toneYellow;
 }
 .offer-red {
-  @apply text-[#961f1f];
+  @apply text-toneRed;
 }
 .offer-brown {
-  @apply text-[#94623c];
+  @apply text-toneBrown;
 }
 .offer-green {
-  @apply text-[#003d29];
+  @apply text-toneGreen;
 }
 .offer-bg-yellow {
-  @apply bg-[#cb9917]/20;
+  @apply bg-toneYellow/20;
 }
 .offer-bg-red {
-  @apply bg-[#961f1f]/20;
+  @apply bg-toneRed/20;
 }
 .offer-bg-brown {
-  @apply bg-[#94623c]/20;
+  @apply bg-toneBrown/20;
 }
 .offer-bg-green {
-  @apply bg-[#003d29]/20;
+  @apply bg-toneGreen/20;
 }

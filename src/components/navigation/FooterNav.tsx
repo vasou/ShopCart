@@ -2,14 +2,14 @@ import { CircleHelp, Gift, Luggage } from "lucide-react";
 import { Link } from "react-router-dom";
 import "@/components/styles/FooterNav.css";
 import FooterLogo from "@/assets/shopcart_logo.svg";
-import Stripe from "@/assets/stripe.png";
-import Visa from "@/assets/visa.png";
-import MasterCard from "@/assets/Mastercard.png";
-import AmazonPay from "@/assets/Amazon.png";
-import Klarna from "@/assets/Klarna.png";
-import PayPal from "@/assets/PayPal.png";
-import ApplePay from "@/assets/ApplePay.png";
-import GooglePay from "@/assets/ApplePay.png";
+import Stripe from "@/assets/payments/stripe.png";
+import Visa from "@/assets/payments/visa.png";
+import MasterCard from "@/assets/payments/Mastercard.png";
+import AmazonPay from "@/assets/payments/Amazon.png";
+import Klarna from "@/assets/payments/Klarna.png";
+import PayPal from "@/assets/payments/PayPal.png";
+import ApplePay from "@/assets/payments/ApplePay.png";
+import GooglePay from "@/assets/payments/ApplePay.png";
 
 const DepartmentList = [
   {

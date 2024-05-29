@@ -1,0 +1,10 @@
+.product-card-wrap .img-wrap {
+  @apply w-full min-h-[300px] flex items-center justify-center bg-gray-100;
+}
+.product-card-wrap .title,
+.product-card-wrap .price {
+  @apply pt-4 pb-2  text-lg font-semibold;
+}
+.product-card-wrap .short-desc {
+  @apply text-base;
+}
