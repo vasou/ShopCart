@@ -1,0 +1,41 @@
+/* Footer general styles */
+.footer-heading {
+  @apply pb-4 text-lg font-semibold;
+}
+/* Payments icon styles */
+.payment-icons-wrap {
+  @apply max-w-[280px] flex flex-wrap gap-2;
+}
+.payment-icons-wrap .card {
+  @apply w-[58px] h-[40px] flex items-center justify-center border border-gray-300 rounded-sm;
+}
+/* Footer top styles */
+.footer-section .top {
+  @apply mt-8 py-8 flex justify-between max_2xl:flex-col border-0 border-t border-gray-300;
+}
+.footer-section .top .left {
+  @apply max-w-sm;
+}
+.footer-section .top .right {
+  @apply max_2xl:pt-12 grid grid-cols-4 max_md:grid-cols-3 max_sm:grid-cols-2 gap-10;
+}
+.footer-section .top .right .footer-link {
+  @apply mb-2;
+}
+/* Footer bottom styles */
+.footer-section .bottom {
+  @apply py-4 flex justify-between max_xl:flex-col max_sm:grid max_sm:grid-cols-2 border-0 border-t border-gray-300;
+}
+.footer-section .bottom .left {
+  @apply flex gap-10 max_2xl:gap-4 max_2xl:justify-center max_2xl:py-2 max_sm:flex-col max_sm:gap-2;
+}
+.footer-section .bottom .right {
+  @apply flex justify-end gap-10 max_2xl:gap-4 max_2xl:justify-center max_2xl:py-2 max_sm:flex-col max_sm:gap-2 max_sm:items-end;
+}
+/* Footer links */
+.footer-link {
+  @apply flex items-center gap-2;
+}
+.footer-link .footer-icon {
+  @apply text-green-800;
+}
