@@ -1,0 +1,24 @@
+.offer-yellow {
+  @apply text-toneYellow;
+}
+.offer-red {
+  @apply text-toneRed;
+}
+.offer-brown {
+  @apply text-toneBrown;
+}
+.offer-green {
+  @apply text-toneGreen;
+}
+.offer-bg-yellow {
+  @apply bg-toneYellow/20;
+}
+.offer-bg-red {
+  @apply bg-toneRed/20;
+}
+.offer-bg-brown {
+  @apply bg-toneBrown/20;
+}
+.offer-bg-green {
+  @apply bg-toneGreen/20;
+}
