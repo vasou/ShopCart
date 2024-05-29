@@ -1,0 +1,9 @@
+.product-details-wrap .delivery-blk-wrap .card {
+  @apply mt-[-1px] p-8 flex gap-4 border border-gray-300;
+}
+.product-details-wrap .delivery-blk-wrap .card:first-child {
+  @apply mt-0 rounded-tl-md rounded-tr-md;
+}
+.product-details-wrap .delivery-blk-wrap .card:last-child {
+  @apply rounded-bl-md rounded-br-md;
+}
