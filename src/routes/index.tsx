@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const LandingPage = lazy(() => import("@/containers/staticPages/LandingPage"));
+const LandingPage = lazy(() => import("@/containers/LandingPage"));
 const ProductDetail = lazy(() => import("@/containers/ProductDetail"));
 
 export default function AppRoute() {

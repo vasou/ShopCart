@@ -1,4 +1,5 @@
 import "@/components/styles/ProductDeliveryInfoCard.css";
+import { Link } from "react-router-dom";
 
 interface ProductDeliveryInfoCardProps {
   children: React.ReactNode;
@@ -15,8 +16,8 @@ export default function ProductDeliveryInfoCard({
     <div className="card">
       <div className="icon-blk">{children}</div>
       <div>
-        <p>{heading}</p>
-        <p>{description}</p>
+        <h4>{heading}</h4>
+        <Link to={""}>{description}</Link>
       </div>
     </div>
   );
