@@ -55,8 +55,17 @@
 .product-details-wrap .colors-group {
   @apply pt-2 flex gap-4;
 }
-.product-details-wrap .colors-group button {
-  @apply p-0 rounded-full;
+.product-details-wrap .colors-group [role="radiogroup"] {
+  @apply flex gap-4;
+}
+.product-details-wrap .colors-group [role="radiogroup"] button {
+  @apply w-10 h-10 border border-gray-400;
+}
+.product-details-wrap .colors-group [role="radiogroup"] button span {
+  @apply -mt-[5px] -ml-[5px] w-12 h-12 border-2 border-gray-800 rounded-full;
+}
+.product-details-wrap .colors-group [role="radiogroup"] button span svg {
+  @apply hidden;
 }
 
 /* Quantity block styles */
