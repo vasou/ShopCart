@@ -9,6 +9,7 @@ interface Rating {
 }
 
 interface ProductCardProps {
+  id: number;
   title: string;
   price: number;
   description: string;
@@ -17,6 +18,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({
+  id,
   title,
   price,
   description,
@@ -25,7 +27,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <div className="product-card-wrap">
-      <Link to={""}>
+      <Link to={`/products/${id}`}>
         <div className="img-wrap">
           <img src={image} alt={title} />
         </div>
