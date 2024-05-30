@@ -2,7 +2,7 @@
   @apply bg-white;
 }
 .header-nav-wrap .content-container {
-  @apply min-h-[82px] flex items-center justify-between;
+  @apply min-h-[82px] flex items-center justify-between border-0 border-b border-gray-300;
 }
 .header-right-blk {
   @apply flex justify-between;

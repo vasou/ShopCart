@@ -1,0 +1,77 @@
+.product-details-wrap {
+  @apply py-20 grid grid-cols-2 max_sm:grid-cols-1 gap-6;
+}
+.product-details-wrap .img-wrap .big-img {
+  @apply mb-4 p-10 flex items-center justify-center bg-gray-100;
+}
+.product-details-wrap .img-wrap .big-img img {
+  @apply w-full;
+}
+.product-details-wrap .img-wrap .img-gallery {
+  @apply flex gap-4 flex-nowrap overflow-auto;
+}
+.product-details-wrap .img-wrap .img-gallery button {
+  @apply shrink-0;
+}
+.product-details-wrap .img-wrap .img-gallery .img-blk {
+  @apply w-40 h-40 max_lg:w-36 max_lg:h-36 max_sm:w-32 max_sm:h-32 max_s:w-24 max_s:h-24 flex items-center justify-center bg-gray-100;
+}
+.product-details-wrap .img-wrap .img-gallery img {
+  @apply w-10;
+}
+
+/* Product content styles */
+.product-details-wrap .product-content-wrap {
+  @apply pb-4 border-0 border-b border-gray-300;
+}
+
+/* Pricing block styles */
+.product-details-wrap .price-blk-wrap {
+  @apply py-8 border-0 border-b border-gray-300;
+}
+
+/* Colors block styles */
+.product-details-wrap .colors-blk-wrap {
+  @apply py-8 border-0 border-b border-gray-300;
+}
+.product-details-wrap .colors-group {
+  @apply flex gap-4;
+}
+.product-details-wrap .colors-group button {
+  @apply p-0 rounded-full;
+}
+
+/* Quantity block styles */
+.product-details-wrap .quantity-blk-wrap {
+  @apply py-8 flex gap-6;
+}
+.product-details-wrap .quantity-group {
+  @apply flex;
+}
+.product-details-wrap .quantity-group .quantity {
+  @apply w-10 h-10 flex items-center justify-center bg-gray-100;
+}
+.product-details-wrap .quantity-group .items-left {
+  @apply text-lg font-normal;
+}
+.product-details-wrap .quantity-group .items-left span {
+  @apply text-toneRed font-semibold;
+}
+
+/* General container styles */
+.product-details-wrap .content-75 {
+  @apply max-w-[500px];
+}
+
+/* Action block styles */
+.product-details-wrap .action-blk-wrap {
+  @apply pb-8 flex gap-4;
+}
+.product-details-wrap .action-blk-wrap button {
+  @apply w-48;
+}
+
+/* Delivery block styles */
+.product-details-wrap .delivery-blk-wrap {
+  @apply py-4;
+}

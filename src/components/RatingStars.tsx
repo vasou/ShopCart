@@ -8,17 +8,20 @@ export default function RatingStars({ rating }: RatingStarsProps) {
   const stars = Array(5).fill(0);
 
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-[0.5]">
       {stars.map((_, index) => {
         return (
           <Star
             key={index}
             width={20}
             height={20}
-            color={rating > index ? "green" : "gray"}
+            fill={rating > index ? "green" : "gray"}
+            strokeWidth={0}
           />
         );
       })}
     </div>
   );
 }
+
+// fill="#111" strokeWidth={0}
