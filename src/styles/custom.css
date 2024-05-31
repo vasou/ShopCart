@@ -1,5 +1,5 @@
 body {
-  @apply font-primary text-gray-800;
+  @apply relative font-primary text-gray-800;
 }
 .page-section {
   @apply my-20 max_lg:my-16 max_md:my-14 max_s:my-12;

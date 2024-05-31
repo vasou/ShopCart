@@ -14,6 +14,28 @@ export const ProductsList = [
     price: 59.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product1,
     imageGallery: [
       {
@@ -40,6 +62,28 @@ export const ProductsList = [
     price: 559.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product2,
     rating: {
       rate: 3,
@@ -52,6 +96,28 @@ export const ProductsList = [
     price: 39.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product3,
     rating: {
       rate: 4,
@@ -64,6 +130,28 @@ export const ProductsList = [
     price: 19.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product4,
     rating: {
       rate: 5,
@@ -76,6 +164,28 @@ export const ProductsList = [
     price: 59.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product5,
     rating: {
       rate: 5,
@@ -88,6 +198,28 @@ export const ProductsList = [
     price: 1099.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product6,
     rating: {
       rate: 4,
@@ -100,6 +232,28 @@ export const ProductsList = [
     price: 59.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product7,
     rating: {
       rate: 2,
@@ -112,6 +266,28 @@ export const ProductsList = [
     price: 539.0,
     description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit",
     category: "category",
+    colors: [
+      {
+        id: 1,
+        color: "#a40f0f",
+        value: "red",
+      },
+      {
+        id: 2,
+        color: "#a4890f",
+        value: "yellow",
+      },
+      {
+        id: 3,
+        color: "#2da40f",
+        value: "green",
+      },
+      {
+        id: 4,
+        color: "#0f41a4",
+        value: "blue",
+      },
+    ],
     image: Product8,
     rating: {
       rate: 3,

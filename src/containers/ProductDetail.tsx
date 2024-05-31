@@ -3,28 +3,27 @@ import ProductDeliveryInfoCard from "@/components/card/ProductDeliveryInfoCard";
 import PageLayout from "@/components/layout/PageLayout";
 import "@/components/styles/ProductDetails.css";
 import { Button } from "@/components/ui/button";
-import { Circle, Minus, Package, Plus, Truck } from "lucide-react";
-import { useEffect } from "react";
+import { Minus, Package, Plus, Truck } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { ProductsList } from "@/data/products";
-
-// interface Rating {
-//   rate: number;
-//   count: number;
-// }
-
-// interface ProductDetailProps {
-//   title: string;
-//   price: number;
-//   description: string;
-//   image: string;
-//   rating: Rating;
-// }
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+interface valueTypes {
+  id: number;
+  quantity: number;
+}
 
 export default function ProductDetail() {
   const params = useParams<{ id: string }>();
   const productId = Number(params.id);
+
+  const [productQuantity, setProductQuantity] = useState(1);
+
+  const [productCart, setProductCart] = useState<valueTypes>({
+    id: 0,
+    quantity: 0,
+  });
 
   const product = ProductsList.find((product) => {
     return product.id === productId;
@@ -33,6 +32,12 @@ export default function ProductDetail() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  function AddtoCart() {
+    console.log("Added to cart");
+    setProductCart({ id: productId, quantity: productQuantity });
+    console.log(productCart);
+  }
 
   return (
     <PageLayout>
@@ -79,20 +84,42 @@ export default function ProductDetail() {
                 <div className="colors-blk-wrap">
                   <h3>Choose a color</h3>
                   <div className="colors-group">
-                    <Button variant={"ghost"}>
-                      <Circle width={40} height={40} />
-                    </Button>
+                    <RadioGroup defaultValue={"red"}>
+                      {product.colors.map((item) => {
+                        return (
+                          <RadioGroupItem
+                            key={item.id}
+                            value={item.value}
+                            id={item.value}
+                            // checked={item.value === "blue"}
+                            style={{ backgroundColor: item.color }}
+                          />
+                        );
+                      })}
+                    </RadioGroup>
                   </div>
                 </div>
                 <div className="quantity-blk-wrap">
                   <div className="quantity-group">
-                    <Button variant={"ghost"}>
+                    <Button
+                      variant={"ghost"}
+                      onClick={() => {
+                        if (productQuantity !== 1) {
+                          setProductQuantity(productQuantity - 1);
+                        }
+                      }}
+                    >
                       <Minus width={34} height={34} />
                     </Button>
                     <div className="quantity">
-                      <p>1</p>
+                      <p>{productQuantity}</p>
                     </div>
-                    <Button variant={"ghost"}>
+                    <Button
+                      variant={"ghost"}
+                      onClick={() => {
+                        setProductQuantity(productQuantity + 1);
+                      }}
+                    >
                       <Plus width={34} height={34} />
                     </Button>
                   </div>
@@ -105,7 +132,11 @@ export default function ProductDetail() {
                 <div className="content-75">
                   <div className="action-blk-wrap">
                     <Button className="mega-button">Buy now</Button>
-                    <Button variant={"outline"} className="mega-button">
+                    <Button
+                      variant={"outline"}
+                      className="mega-button"
+                      onClick={AddtoCart}
+                    >
                       Add to cart
                     </Button>
                   </div>
