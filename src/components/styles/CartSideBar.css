@@ -13,7 +13,7 @@
 
 /* Cart list styles */
 .mini-product-list-wrap {
-  @apply grid grid-cols-1 gap-6;
+  @apply grid grid-cols-1 gap-4;
 }
 .mini-product-list-wrap .cart-product-card {
   @apply p-4 flex gap-4 border border-gray-300 rounded-md;
@@ -31,7 +31,7 @@
   @apply py-4;
 }
 .mini-product-list-wrap .quantity-group {
-  @apply flex items-center rounded-md bg-gray-300;
+  @apply w-[144px] flex items-center rounded-md bg-gray-300;
 }
 .mini-product-list-wrap .quantity-group .quantity {
   @apply w-10 h-10 flex items-center justify-center;

@@ -1,7 +1,7 @@
 import { CircleX } from "lucide-react";
 import "@/components/styles/CartSideBar.css";
 import { Button } from "./ui/button";
-// import { ProductsList } from "@/data/products";
+import { ProductsList } from "@/data/products";
 import MiniProductCard from "./card/MiniProductCard";
 
 interface CartSideBarProps {
@@ -13,6 +13,12 @@ export default function CartSideBar({
   status,
   handleChange,
 }: CartSideBarProps) {
+  const savedProducts = [1013947294, 1013947238];
+
+  const filterProducts = ProductsList.filter((item) =>
+    savedProducts.includes(item.id)
+  );
+
   return (
     <>
       {status && (
@@ -23,7 +29,18 @@ export default function CartSideBar({
               <CircleX width={26} height={26} />
             </Button>
           </div>
-          <MiniProductCard title="Check" price={29.0} image="" />
+          <div className="mini-product-list-wrap">
+            {filterProducts.map((product) => {
+              return (
+                <MiniProductCard
+                  key={product.id}
+                  title={product.title}
+                  price={product.price}
+                  image={product.image}
+                />
+              );
+            })}
+          </div>
         </div>
       )}
     </>
