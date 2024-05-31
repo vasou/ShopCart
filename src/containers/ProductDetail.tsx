@@ -19,15 +19,6 @@ export default function ProductDetail() {
   const productId = Number(params.id);
 
   const [productQuantity, setProductQuantity] = useState(1);
-  // const [productColor, setProductColor] = useState("");
-
-  // const handleColorChange = (event) => {
-  //   event.preventDefault();
-  //   setProductColor(event.target.value);
-  //   console.log(productColor);
-  // };
-
-  // console.log(productColor);
 
   const [productCart, setProductCart] = useState<valueTypes>({
     id: 0,
@@ -41,8 +32,6 @@ export default function ProductDetail() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  console.log(productQuantity);
 
   function AddtoCart() {
     console.log("Added to cart");

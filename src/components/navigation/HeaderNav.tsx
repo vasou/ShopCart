@@ -4,8 +4,16 @@ import { Button } from "../ui/button";
 import { Menu, ShoppingCart, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Input } from "../ui/input";
+import CartSideBar from "../CartSideBar";
+import { useState } from "react";
 
 export default function HeaderNav() {
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const handleChange = () => {
+    setCartOpen((prev) => !prev);
+  };
+
   return (
     <>
       <div className="header-nav-wrap">
@@ -36,7 +44,11 @@ export default function HeaderNav() {
               </Button>
             </div>
             <div className="max_s:hidden">
-              <Button variant={"ghost"} className="flex gap-2">
+              <Button
+                variant={"ghost"}
+                className="flex gap-2"
+                onClick={handleChange}
+              >
                 <ShoppingCart width={"26"} height={"26"} />
                 Cart
               </Button>
@@ -44,6 +56,7 @@ export default function HeaderNav() {
           </div>
         </div>
       </div>
+      <CartSideBar status={cartOpen} handleChange={handleChange} />
     </>
   );
 }
