@@ -3,6 +3,8 @@ import "@/components/styles/CartSideBar.css";
 import { Button } from "./ui/button";
 import { ProductsList } from "@/data/products";
 import MiniProductCard from "./card/MiniProductCard";
+import { useSelector } from "react-redux";
+import { combineReducers } from "@reduxjs/toolkit";
 
 interface CartSideBarProps {
   status: boolean;
@@ -18,6 +20,11 @@ export default function CartSideBar({
   const filterProducts = ProductsList.filter((item) =>
     savedProducts.includes(item.id)
   );
+
+  const rootReducer = combineReducers({});
+  type IRootState = ReturnType<typeof rootReducer>;
+  const cart = useSelector<IRootState>((state) => state.cart.value);
+  console.log("from line 27", cart);
 
   return (
     <>
