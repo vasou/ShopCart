@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { ProductsList } from "@/data/products";
 import MiniProductCard from "./card/MiniProductCard";
 import { useSelector } from "react-redux";
-import { combineReducers } from "@reduxjs/toolkit";
+import { RootState } from "@/state/store";
 
 interface CartSideBarProps {
   status: boolean;
@@ -15,16 +15,15 @@ export default function CartSideBar({
   status,
   handleChange,
 }: CartSideBarProps) {
-  const savedProducts = [1013947294, 1013947238];
+  // const savedProducts = [{ id: 1013947294 }, { id: 1013947238 }];
 
-  const filterProducts = ProductsList.filter((item) =>
-    savedProducts.includes(item.id)
+  const cart = useSelector((state: RootState) => state.cart.products);
+  console.log(cart);
+
+  const filterProducts = cart.map((fullItem) =>
+    ProductsList.filter((selectedItem) => selectedItem.id === fullItem.id)
   );
-
-  const rootReducer = combineReducers({});
-  type IRootState = ReturnType<typeof rootReducer>;
-  const cart = useSelector<IRootState>((state) => state.cart.value);
-  console.log("from line 27", cart);
+  console.log(filterProducts);
 
   return (
     <>
@@ -37,13 +36,13 @@ export default function CartSideBar({
             </Button>
           </div>
           <div className="mini-product-list-wrap">
-            {filterProducts.map((product) => {
+            {filterProducts.map((product, item) => {
               return (
                 <MiniProductCard
-                  key={product.id}
-                  title={product.title}
-                  price={product.price}
-                  image={product.image}
+                  key={item}
+                  title={product[0].title}
+                  price={product[0].price}
+                  image={product[0].image}
                 />
               );
             })}

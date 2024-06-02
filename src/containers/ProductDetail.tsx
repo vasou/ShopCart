@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { ProductsList } from "@/data/products";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useDispatch } from "react-redux";
+import { increaseAmount } from "@/state/cart/cartSlice";
 interface valueTypes {
   id: number;
   quantity: number;
@@ -38,6 +40,8 @@ export default function ProductDetail() {
     setProductCart({ id: productId, quantity: productQuantity });
     console.log(productCart);
   }
+
+  const dispatch = useDispatch();
 
   return (
     <PageLayout>
@@ -117,7 +121,7 @@ export default function ProductDetail() {
                     <Button
                       variant={"ghost"}
                       onClick={() => {
-                        setProductQuantity(productQuantity + 1);
+                        dispatch(increaseAmount({ product }));
                       }}
                     >
                       <Plus width={34} height={34} />

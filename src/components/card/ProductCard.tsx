@@ -2,6 +2,8 @@ import { Button } from "../ui/button";
 import RatingStars from "../RatingStars";
 import { Link } from "react-router-dom";
 import "@/components/styles/ProductCard.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/state/cart/cartSlice";
 
 interface Rating {
   rate: number;
@@ -25,6 +27,9 @@ export default function ProductCard({
   image,
   rating,
 }: ProductCardProps) {
+  // const cart = useSelector((state: RootState) => state.cart.products);
+  const dispatch = useDispatch();
+
   return (
     <div className="product-card-wrap">
       <Link to={`/products/${id}`}>
@@ -46,7 +51,9 @@ export default function ProductCard({
         </div>
       </div>
       <div>
-        <Button variant={"outline"}>Add to Card</Button>
+        <Button variant={"outline"} onClick={() => dispatch(addToCart(id))}>
+          Add to Card
+        </Button>
       </div>
     </div>
   );
