@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "@/components/styles/ProductCard.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/state/cart/cartSlice";
+import { useAppDispatch, useAppSelector } from "@/state/hooks";
 
 interface Rating {
   rate: number;
@@ -27,8 +28,9 @@ export default function ProductCard({
   image,
   rating,
 }: ProductCardProps) {
-  // const cart = useSelector((state: RootState) => state.cart.products);
-  const dispatch = useDispatch();
+  const count = useAppSelector((store) => store.cart.length);
+
+  const dispatch = useAppDispatch();
 
   return (
     <div className="product-card-wrap">
@@ -50,10 +52,10 @@ export default function ProductCard({
           </div>
         </div>
       </div>
+      <p>Count {count}</p>
       <div>
-        <Button variant={"outline"} onClick={() => dispatch(addToCart(id))}>
-          Add to Card
-        </Button>
+        {/* <Button variant={"outline"} onClick={() => dispatch(addToCart(id))}> */}
+        <Button variant={"outline"}>Add to Card</Button>
       </div>
     </div>
   );
